@@ -2,14 +2,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Open-sans', sans-serif;
+}
+
+.menu-overlay{
+    display: block;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: #eee;
+    z-index: 5;
 }
 
 .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1000px;
-    margin: 20px auto;
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.nav {
+    position: relative;
 }
 
 /*menu-btn*/
@@ -21,17 +36,17 @@
     width: 80px;
     height: 80px;
     cursor: pointer;
-    transition: all .5s ease-in-out;
-    border: 3px solid #fff;
+    transition: all .3s ease-in-out;
+    z-index: 30;
 }
 
 .menu-btn__burger{
     width: 50px;
     height: 6px;
-    background: #a5a5a5;
+    background: #edb814;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
-    transition: all .5s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .menu-btn__burger::before,
@@ -40,10 +55,10 @@
     position: absolute;
     width: 50px;
     height: 6px;
-    background: #a5a5a5;
+    background: #edb814;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
-    transition: all .5s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .menu-btn__burger::before{
@@ -68,6 +83,43 @@
     transform: rotate(-45deg) translate(35px, 35px);
 }
 
+/*menu-list*/
+
+.menu-list{
+    width: 480px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: absolute;
+    flex-flow: column;
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(241,219,44,1) 100%);
+    box-shadow: 20px 0px 30px rgba(0, 0, 0, .3);
+    padding: 150px 50px;
+    height: 100vh;
+    margin-top: -100px;
+    position: absolute;
+    left: -135px;
+    transition: all .5s ease-in-out;
+    z-index: 20;
+}
+
+.menu-list__hidden{
+    transform: translate(-125%);
+}
+
+.menu-list li {
+    list-style-type: none;
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.menu-list a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+
 /*Toggle button*/
 .knobs, .layer {
     position: absolute;
@@ -82,6 +134,7 @@
     width: 128px;
     height: 36px;
     overflow: hidden;
+    z-index: 10;
 }
 
 .button.r, .button.r .layer {
@@ -156,7 +209,7 @@
     background-color: #03a9f4;
     transform: rotateY(0);
     transform-origin: 0% 50%;
-    transition: 0.6s ease all;
+    transition: 0.4s ease all;
     z-index: 1;
 }
 
