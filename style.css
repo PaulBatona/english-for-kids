@@ -5,6 +5,11 @@
     font-family: 'Open-sans', sans-serif;
 }
 
+body{
+    background-image: url('assets/img/memphis-colorful.png');
+    height: 100vh;
+}
+
 .menu-overlay{
     display: none;
     position: fixed;
@@ -173,6 +178,7 @@
 
 #toggle-button {
     overflow: visible;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.5);
 }
 
 #toggle-button .knobs {
@@ -230,8 +236,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px 15px;
-    padding: 0 100px;
+    padding: 30px 100px 0;
     margin: auto;
 }
 
