@@ -358,3 +358,7 @@ body{
     -webkit-filter: none;
     filter: none;
 }
+
+.flip {
+    transform:rotateY(180deg);
+}

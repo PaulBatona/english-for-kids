@@ -317,7 +317,7 @@ const cards = {
       },
       {
         word: 'giraffe',
-        translation: 'жирафа',
+        translation: 'жираф',
         image: 'assets/img/giraffe.jpg',
         audioSrc: 'assets/audio/giraffe.mp3'
       },
@@ -520,11 +520,13 @@ function createCardsActionA(){
         innerDiv.appendChild(backDiv);
         innerDiv.appendChild(rotate);
         frontDiv.style.backgroundImage = "url(" + elem.image + ")";
+        backDiv.style.backgroundImage = "url(" + elem.image + ")";
         frontDiv.innerHTML = '<div class="card-header">' + elem.word + '</div>';
         backDiv.innerHTML = '<div class="card-header">' + elem.translation +'</div>';
         
         container.appendChild(keyElement);
     });
+    flip();
 };
 
 function createCardsActionB(){
@@ -549,11 +551,13 @@ function createCardsActionB(){
         innerDiv.appendChild(backDiv);
         innerDiv.appendChild(rotate);
         frontDiv.style.backgroundImage = "url(" + elem.image + ")";
+        backDiv.style.backgroundImage = "url(" + elem.image + ")";
         frontDiv.innerHTML = '<div class="card-header">' + elem.word + '</div>';
         backDiv.innerHTML = '<div class="card-header">' + elem.translation +'</div>';
         
         container.appendChild(keyElement);
     });
+    flip();
 };
 
 function createCardsActionC(){
@@ -578,11 +582,13 @@ function createCardsActionC(){
         innerDiv.appendChild(backDiv);
         innerDiv.appendChild(rotate);
         frontDiv.style.backgroundImage = "url(" + elem.image + ")";
+        backDiv.style.backgroundImage = "url(" + elem.image + ")";
         frontDiv.innerHTML = '<div class="card-header">' + elem.word + '</div>';
         backDiv.innerHTML = '<div class="card-header">' + elem.translation +'</div>';
         
         container.appendChild(keyElement);
     });
+    flip();
 };
 
 function createCardsAnimalA(){
@@ -607,11 +613,13 @@ function createCardsAnimalA(){
         innerDiv.appendChild(backDiv);
         innerDiv.appendChild(rotate);
         frontDiv.style.backgroundImage = "url(" + elem.image + ")";
+        backDiv.style.backgroundImage = "url(" + elem.image + ")";
         frontDiv.innerHTML = '<div class="card-header">' + elem.word + '</div>';
         backDiv.innerHTML = '<div class="card-header">' + elem.translation +'</div>';
         
         container.appendChild(keyElement);
     });
+    flip();
 };
 
 function createCardsAnimalB(){
@@ -636,11 +644,13 @@ function createCardsAnimalB(){
         innerDiv.appendChild(backDiv);
         innerDiv.appendChild(rotate);
         frontDiv.style.backgroundImage = "url(" + elem.image + ")";
+        backDiv.style.backgroundImage = "url(" + elem.image + ")";
         frontDiv.innerHTML = '<div class="card-header">' + elem.word + '</div>';
         backDiv.innerHTML = '<div class="card-header">' + elem.translation +'</div>';
         
         container.appendChild(keyElement);
     });
+    flip();
 };
 
 function createCardsEmotion(){
@@ -665,11 +675,13 @@ function createCardsEmotion(){
         innerDiv.appendChild(backDiv);
         innerDiv.appendChild(rotate);
         frontDiv.style.backgroundImage = "url(" + elem.image + ")";
+        backDiv.style.backgroundImage = "url(" + elem.image + ")";
         frontDiv.innerHTML = '<div class="card-header">' + elem.word + '</div>';
         backDiv.innerHTML = '<div class="card-header">' + elem.translation +'</div>';
         
         container.appendChild(keyElement);
     });
+    flip();
 };
 
 function createCardsClothes(){
@@ -694,11 +706,13 @@ function createCardsClothes(){
         innerDiv.appendChild(backDiv);
         innerDiv.appendChild(rotate);
         frontDiv.style.backgroundImage = "url(" + elem.image + ")";
+        backDiv.style.backgroundImage = "url(" + elem.image + ")";
         frontDiv.innerHTML = '<div class="card-header">' + elem.word + '</div>';
         backDiv.innerHTML = '<div class="card-header">' + elem.translation +'</div>';
         
         container.appendChild(keyElement);
     });
+    flip();
 };
 
 function createCardsSeaAnimal(){
@@ -723,10 +737,26 @@ function createCardsSeaAnimal(){
         innerDiv.appendChild(backDiv);
         innerDiv.appendChild(rotate);
         frontDiv.style.backgroundImage = "url(" + elem.image + ")";
+        backDiv.style.backgroundImage = "url(" + elem.image + ")";
         frontDiv.innerHTML = '<div class="card-header">' + elem.word + '</div>';
         backDiv.innerHTML = '<div class="card-header">' + elem.translation +'</div>';
         
         container.appendChild(keyElement);
     });
+    flip();
 };
 
+function flip(){
+  let rotateIcons = document.querySelectorAll('.rotate');
+  let back = document.querySelectorAll('.back');
+  rotateIcons.forEach(function(elem){
+    elem.addEventListener('click', (e) => {
+      e.target.closest('.card').classList.add('flip');
+    });
+  });
+  back.forEach(function(elem){
+    elem.addEventListener('mouseout', (e) => {
+      e.target.closest('.card').classList.remove('flip');
+    });
+  });
+};
