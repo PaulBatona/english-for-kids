@@ -1,6 +1,7 @@
 const menuBtn = document.querySelector(".menu-btn");
 const menuList = document.querySelector(".menu-list");
-const overlay = document.querySelector(".menu-overlay")
+const overlay = document.querySelector(".menu-overlay");
+const menuLinks = document.querySelectorAll('.menu-list a');
 
 let menuOpen = false;
 
@@ -27,6 +28,10 @@ overlay.addEventListener("click", () => {
 
 menuList.addEventListener("click", (e) => {
     if(e.target.tagName == "A"){
+        menuLinks.forEach(function(elem){
+          elem.classList.remove('active');
+          e.target.classList.add('active');
+        });
         menuBtn.classList.remove("open");
         menuList.classList.add("menu-list__hidden");
         overlay.classList.remove('visible');
