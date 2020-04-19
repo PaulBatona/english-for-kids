@@ -392,7 +392,103 @@ body{
 
 @media screen and (min-width: 766px) and (max-width: 1280px){
     .title{
-        font-size: 60px;
+        font-size: 50px;
+    }
+    .card {
+        width: 220px;
+        height: 190px;
+    }
+    .category-card {
+        font-size: 20px;
+        width: 220px;
+        height: 190px;
+        line-height: 20px;
+    }
+    .category-card img {
+        width: 120px;
+        height: 120px;
+        margin: 20px auto;
+    }
+    .card-header {
+        margin-top: 145px;
+        font-size: 20px;
+    }
+
+    .rotate {
+        height: 45px;
+        background-size: 27px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 765px){
+    .header{
+        padding: 20px 50px 0;
+    }
+    .container{
+        padding: 30px 30px 0;
+    }
+    .title{
+        font-size: 45px;
+    }
+    .menu-list{
+        width: 320px;
+        left: -50px;
+        margin-top: -60px;
+        padding: 70px 50px;
+    }
+
+    .menu-list li {
+        font-size: 17px;
+        margin-top: 14px;
+        justify-content: space-around;
+    }
+    #toggle-button .knobs span {
+        right: 4px;
+        width: 38px;
+        height: 17px;
+    }
+    #toggle-button .knobs:before, #toggle-button .knobs:after {
+        width: 40px;
+        height: 10px;
+        font-size: 10px;
+        line-height: 11px;
+        padding: 4px 3px;
+    }
+    #toggle-button .knobs {
+        perspective: 50px;
+    }
+    .button {
+        width: 85px;
+        height: 25px;
+    }
+    .menu-btn__burger::before, .menu-btn__burger::after {
+        width: 40px;
+        height: 4px;
+    }
+    .menu-btn__burger::after {
+        transform: translateY(12px);
+    }
+    .menu-btn__burger::before {
+        transform: translateY(-12px);
+    }
+    .menu-btn__burger {
+        width: 40px;
+        height: 4px;
+    }
+    .menu-btn {
+        width: 40px;
+        height: 40px;
+    }
+    .category-card {
+        font-size: 20px;
+        width: 220px;
+        height: 190px;
+        line-height: 20px;
+    }
+    .category-card img {
+        width: 120px;
+        height: 120px;
+        margin: 20px auto;
     }
     .card {
         width: 220px;
@@ -409,17 +505,8 @@ body{
         background-size: 27px;
     }
 }
-
-@media screen and (min-width: 320px) and (max-width: 765px){
+@media screen and (max-width: 520px){
     .title{
-        font-size: 45px;
-    }
-    .menu-list{
-        width: 320px;
-    }
-
-    .menu-list li {
-        font-size: 27px;
-        margin-top: 27px;
+        display: none;
     }
 }
