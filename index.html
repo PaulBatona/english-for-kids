@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     <title>English for kids</title>
@@ -11,24 +12,23 @@
 <body>
   <div class="menu-overlay"></div>
   <header class="header">
-
     <nav class="nav">
       <div class="menu-btn">
         <div class="menu-btn__burger"></div>
       </div>
       <ul class="menu-list menu-list__hidden">
-        <li><a href="#" class="active" onclick="createCategories()">Main Page</a></li>
-        <li><a href="#" onclick="createCardsActionA()">Action (set A)</a></li>
-        <li><a href="#" onclick="createCardsActionB()">Action (set B)</a></li>
-        <li><a href="#" onclick="createCardsActionC()">Action (set C)</a></li>
-        <li><a href="#" onclick="createCardsAnimalA()">Animal (set A)</a></li>
-        <li><a href="#" onclick="createCardsAnimalB()">Animal (set B)</a></li>
-        <li><a href="#" onclick="createCardsSeaAnimal()">Sea animal</a></li>
-        <li><a href="#" onclick="createCardsClothes()">Clothes</a></li>
-        <li><a href="#" onclick="createCardsEmotion()">Emotion</a></li>
+        <li><a href="#" class="active" id="link" onclick="createCategories()" data-link="1">Main Page</a></li>
+        <li><a href="#" id="link" onclick="createCardsActionA()" data-link="2">Action (set A)</a></li>
+        <li><a href="#" id="link" onclick="createCardsActionB()">Action (set B)</a></li>
+        <li><a href="#" id="link" onclick="createCardsActionC()">Action (set C)</a></li>
+        <li><a href="#" id="link" onclick="createCardsAnimalA()">Animal (set A)</a></li>
+        <li><a href="#" id="link" onclick="createCardsAnimalB()">Animal (set B)</a></li>
+        <li><a href="#" id="link" onclick="createCardsSeaAnimal()">Sea animal</a></li>
+        <li><a href="#" id="link" onclick="createCardsClothes()">Clothes</a></li>
+        <li><a href="#" id="link" onclick="createCardsEmotion()">Emotion</a></li>
       </ul>
     </nav>
-    
+    <div class="title">English for Kids</div>
     <div class="button" id="toggle-button">
       <input type="checkbox" class="checkbox">
         <div class="knobs">

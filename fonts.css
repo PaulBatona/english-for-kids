@@ -1,0 +1,13 @@
+@font-face{
+    font-family: "Hanging";
+    src: url(assets/fonts/hanging.ttf) format("truetype");
+    font-style: normal; 
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: "Balonku";
+    src: url(assets/fonts/Balonku.otf);
+    font-style: normal;
+    font-weight: normal;
+}
